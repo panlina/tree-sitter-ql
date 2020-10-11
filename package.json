@@ -1,0 +1,12 @@
+{
+  "name": "tree-sitter-ql",
+  "version": "0.0.0",
+  "author": "Jack Lu <jacklu@jacklu.me>",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.14.1"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.17.1"
+  }
+}
