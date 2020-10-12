@@ -16,20 +16,20 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 1
 
 enum {
-  anon_sym_hello = 1,
-  sym_source_file = 2,
+  sym_number = 1,
+  sym_expression = 2,
 };
 
 static const char *ts_symbol_names[] = {
   [ts_builtin_sym_end] = "end",
-  [anon_sym_hello] = "hello",
-  [sym_source_file] = "source_file",
+  [sym_number] = "number",
+  [sym_expression] = "expression",
 };
 
 static TSSymbol ts_symbol_map[] = {
   [ts_builtin_sym_end] = ts_builtin_sym_end,
-  [anon_sym_hello] = anon_sym_hello,
-  [sym_source_file] = sym_source_file,
+  [sym_number] = sym_number,
+  [sym_expression] = sym_expression,
 };
 
 static const TSSymbolMetadata ts_symbol_metadata[] = {
@@ -37,11 +37,11 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
-  [anon_sym_hello] = {
+  [sym_number] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
-  [sym_source_file] = {
+  [sym_expression] = {
     .visible = true,
     .named = true,
   },
@@ -60,30 +60,19 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   eof = lexer->eof(lexer);
   switch (state) {
     case 0:
-      if (eof) ADVANCE(5);
-      if (lookahead == 'h') ADVANCE(1);
+      if (eof) ADVANCE(1);
       if (lookahead == '\t' ||
           lookahead == '\n' ||
           lookahead == '\r' ||
           lookahead == ' ') SKIP(0)
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(2);
       END_STATE();
     case 1:
-      if (lookahead == 'e') ADVANCE(3);
-      END_STATE();
-    case 2:
-      if (lookahead == 'l') ADVANCE(4);
-      END_STATE();
-    case 3:
-      if (lookahead == 'l') ADVANCE(2);
-      END_STATE();
-    case 4:
-      if (lookahead == 'o') ADVANCE(6);
-      END_STATE();
-    case 5:
       ACCEPT_TOKEN(ts_builtin_sym_end);
       END_STATE();
-    case 6:
-      ACCEPT_TOKEN(anon_sym_hello);
+    case 2:
+      ACCEPT_TOKEN(sym_number);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(2);
       END_STATE();
     default:
       return false;
@@ -100,11 +89,11 @@ static TSLexMode ts_lex_modes[STATE_COUNT] = {
 static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [0] = {
     [ts_builtin_sym_end] = ACTIONS(1),
-    [anon_sym_hello] = ACTIONS(1),
+    [sym_number] = ACTIONS(1),
   },
   [1] = {
-    [sym_source_file] = STATE(3),
-    [anon_sym_hello] = ACTIONS(3),
+    [sym_expression] = STATE(3),
+    [sym_number] = ACTIONS(3),
   },
 };
 
@@ -126,7 +115,7 @@ static TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
   [3] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
-  [5] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1),
+  [5] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_expression, 1),
   [7] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
 };
 

@@ -1,6 +1,7 @@
 module.exports = grammar({
 	name: 'ql',
 	rules: {
-		source_file: $ => 'hello'
+		expression: $ => $.number,
+		number: $ => /\d+/
 	}
 });

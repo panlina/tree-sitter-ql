@@ -1,9 +1,13 @@
 {
   "name": "ql",
   "rules": {
-    "source_file": {
-      "type": "STRING",
-      "value": "hello"
+    "expression": {
+      "type": "SYMBOL",
+      "name": "number"
+    },
+    "number": {
+      "type": "PATTERN",
+      "value": "\\d+"
     }
   },
   "extras": [
