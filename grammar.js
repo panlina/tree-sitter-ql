@@ -1,7 +1,8 @@
 module.exports = grammar({
 	name: 'ql',
 	rules: {
-		expression: $ => $.number,
-		number: $ => /\d+/
+		expression: $ => choice($.number, $.string),
+		number: $ => /\d+/,
+		string: $ => seq('"', repeat(/[^"]/), '"')
 	}
 });
