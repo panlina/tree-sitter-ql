@@ -29,7 +29,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "char"
+            "name": "_char"
           }
         },
         {
@@ -38,11 +38,31 @@
         }
       ]
     },
-    "char": {
+    "_char": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "char_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "char_escaped"
+        }
+      ]
+    },
+    "char_literal": {
       "type": "IMMEDIATE_TOKEN",
       "content": {
         "type": "PATTERN",
         "value": "[^\"]"
+      }
+    },
+    "char_escaped": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\\\[\"\\\\bfnrtv]"
       }
     }
   },

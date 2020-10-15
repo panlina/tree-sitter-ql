@@ -27,7 +27,11 @@
       "required": false,
       "types": [
         {
-          "type": "char",
+          "type": "char_escaped",
+          "named": true
+        },
+        {
+          "type": "char_literal",
           "named": true
         }
       ]
@@ -38,7 +42,11 @@
     "named": false
   },
   {
-    "type": "char",
+    "type": "char_escaped",
+    "named": true
+  },
+  {
+    "type": "char_literal",
     "named": true
   },
   {
