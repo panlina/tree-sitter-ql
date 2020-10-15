@@ -21,11 +21,25 @@
   {
     "type": "string",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "char",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "\"",
     "named": false
+  },
+  {
+    "type": "char",
+    "named": true
   },
   {
     "type": "number",

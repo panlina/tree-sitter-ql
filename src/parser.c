@@ -18,7 +18,7 @@
 enum {
   sym_number = 1,
   anon_sym_DQUOTE = 2,
-  aux_sym_string_token1 = 3,
+  sym_char = 3,
   sym_expression = 4,
   sym_string = 5,
   aux_sym_string_repeat1 = 6,
@@ -28,7 +28,7 @@ static const char *ts_symbol_names[] = {
   [ts_builtin_sym_end] = "end",
   [sym_number] = "number",
   [anon_sym_DQUOTE] = "\"",
-  [aux_sym_string_token1] = "string_token1",
+  [sym_char] = "char",
   [sym_expression] = "expression",
   [sym_string] = "string",
   [aux_sym_string_repeat1] = "string_repeat1",
@@ -38,7 +38,7 @@ static TSSymbol ts_symbol_map[] = {
   [ts_builtin_sym_end] = ts_builtin_sym_end,
   [sym_number] = sym_number,
   [anon_sym_DQUOTE] = anon_sym_DQUOTE,
-  [aux_sym_string_token1] = aux_sym_string_token1,
+  [sym_char] = sym_char,
   [sym_expression] = sym_expression,
   [sym_string] = sym_string,
   [aux_sym_string_repeat1] = aux_sym_string_repeat1,
@@ -57,9 +57,9 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
-  [aux_sym_string_token1] = {
-    .visible = false,
-    .named = false,
+  [sym_char] = {
+    .visible = true,
+    .named = true,
   },
   [sym_expression] = {
     .visible = true,
@@ -115,10 +115,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_DQUOTE);
       END_STATE();
     case 5:
-      ACCEPT_TOKEN(aux_sym_string_token1);
+      ACCEPT_TOKEN(sym_char);
       END_STATE();
     case 6:
-      ACCEPT_TOKEN(aux_sym_string_token1);
+      ACCEPT_TOKEN(sym_char);
       if (lookahead == '\t' ||
           lookahead == '\n' ||
           lookahead == '\r' ||
@@ -162,21 +162,21 @@ static uint16_t ts_small_parse_table[] = {
     ACTIONS(7), 1,
       anon_sym_DQUOTE,
     ACTIONS(9), 1,
-      aux_sym_string_token1,
+      sym_char,
     STATE(3), 1,
       aux_sym_string_repeat1,
   [10] = 3,
     ACTIONS(11), 1,
       anon_sym_DQUOTE,
     ACTIONS(13), 1,
-      aux_sym_string_token1,
+      sym_char,
     STATE(4), 1,
       aux_sym_string_repeat1,
   [20] = 3,
     ACTIONS(15), 1,
       anon_sym_DQUOTE,
     ACTIONS(17), 1,
-      aux_sym_string_token1,
+      sym_char,
     STATE(4), 1,
       aux_sym_string_repeat1,
   [30] = 1,

@@ -3,6 +3,7 @@ module.exports = grammar({
 	rules: {
 		expression: $ => choice($.number, $.string),
 		number: $ => /\d+/,
-		string: $ => seq('"', repeat(/[^"]/), '"')
+		string: $ => seq('"', repeat($.char), '"'),
+		char: $ => /[^"]/
 	}
 });

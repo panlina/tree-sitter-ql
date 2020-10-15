@@ -28,8 +28,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "PATTERN",
-            "value": "[^\"]"
+            "type": "SYMBOL",
+            "name": "char"
           }
         },
         {
@@ -37,6 +37,10 @@
           "value": "\""
         }
       ]
+    },
+    "char": {
+      "type": "PATTERN",
+      "value": "[^\"]"
     }
   },
   "extras": [
