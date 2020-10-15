@@ -4,6 +4,6 @@ module.exports = grammar({
 		expression: $ => choice($.number, $.string),
 		number: $ => /\d+/,
 		string: $ => seq('"', repeat($.char), '"'),
-		char: $ => /[^"]/
+		char: $ => token.immediate(/[^"]/)
 	}
 });
