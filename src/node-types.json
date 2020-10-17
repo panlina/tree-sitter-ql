@@ -12,6 +12,10 @@
           "named": true
         },
         {
+          "type": "expression_multiply",
+          "named": true
+        },
+        {
           "type": "number",
           "named": true
         },
@@ -63,6 +67,46 @@
     }
   },
   {
+    "type": "expression_multiply",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "string",
     "named": true,
     "fields": {},
@@ -86,11 +130,19 @@
     "named": false
   },
   {
+    "type": "*",
+    "named": false
+  },
+  {
     "type": "+",
     "named": false
   },
   {
     "type": "-",
+    "named": false
+  },
+  {
+    "type": "/",
     "named": false
   },
   {

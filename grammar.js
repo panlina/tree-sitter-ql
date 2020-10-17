@@ -1,10 +1,15 @@
 module.exports = grammar({
 	name: 'ql',
 	rules: {
-		expression: $ => choice($.number, $.string, $.expression_add),
+		expression: $ => choice($.number, $.string, $.expression_add, $.expression_multiply),
 		expression_add: $ => prec.left(0, seq(
 			field('left', $.expression),
 			field('operator', choice('+', '-')),
+			field('right', $.expression)
+		)),
+		expression_multiply: $ => prec.left(1, seq(
+			field('left', $.expression),
+			field('operator', choice('*', '/')),
 			field('right', $.expression)
 		)),
 		number: $ => /\d+/,
