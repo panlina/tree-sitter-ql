@@ -8,6 +8,10 @@
       "required": true,
       "types": [
         {
+          "type": "expression_add",
+          "named": true
+        },
+        {
           "type": "number",
           "named": true
         },
@@ -16,6 +20,46 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "expression_add",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -39,6 +83,14 @@
   },
   {
     "type": "\"",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "-",
     "named": false
   },
   {
