@@ -4,6 +4,16 @@ module.exports = grammar({
 		expression: $ => choice($.number, $.string, $.expression_binary, $.expression_unary),
 		expression_binary: $ => choice(
 			...[
+				['|', -4],
+				['&', -3],
+				['!', -2],
+				['<=', -1],
+				['=', -1],
+				['>=', -1],
+				['<', -1],
+				['!=', -1],
+				['>', -1],
+				['in', -1],
 				['+', 0],
 				['-', 0],
 				['*', 1],
