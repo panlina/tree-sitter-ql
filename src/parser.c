@@ -8,7 +8,7 @@
 #define LANGUAGE_VERSION 12
 #define STATE_COUNT 15
 #define LARGE_STATE_COUNT 5
-#define SYMBOL_COUNT 16
+#define SYMBOL_COUNT 15
 #define ALIAS_COUNT 0
 #define TOKEN_COUNT 9
 #define EXTERNAL_TOKEN_COUNT 0
@@ -25,12 +25,11 @@ enum {
   sym_char_literal = 7,
   sym_char_escaped = 8,
   sym_expression = 9,
-  sym_expression_add = 10,
-  sym_expression_multiply = 11,
-  sym_expression_add_unary = 12,
-  sym_string = 13,
-  sym__char = 14,
-  aux_sym_string_repeat1 = 15,
+  sym_expression_binary = 10,
+  sym_expression_unary = 11,
+  sym_string = 12,
+  sym__char = 13,
+  aux_sym_string_repeat1 = 14,
 };
 
 static const char *ts_symbol_names[] = {
@@ -44,9 +43,8 @@ static const char *ts_symbol_names[] = {
   [sym_char_literal] = "char_literal",
   [sym_char_escaped] = "char_escaped",
   [sym_expression] = "expression",
-  [sym_expression_add] = "expression_add",
-  [sym_expression_multiply] = "expression_multiply",
-  [sym_expression_add_unary] = "expression_add_unary",
+  [sym_expression_binary] = "expression_binary",
+  [sym_expression_unary] = "expression_unary",
   [sym_string] = "string",
   [sym__char] = "_char",
   [aux_sym_string_repeat1] = "string_repeat1",
@@ -63,9 +61,8 @@ static TSSymbol ts_symbol_map[] = {
   [sym_char_literal] = sym_char_literal,
   [sym_char_escaped] = sym_char_escaped,
   [sym_expression] = sym_expression,
-  [sym_expression_add] = sym_expression_add,
-  [sym_expression_multiply] = sym_expression_multiply,
-  [sym_expression_add_unary] = sym_expression_add_unary,
+  [sym_expression_binary] = sym_expression_binary,
+  [sym_expression_unary] = sym_expression_unary,
   [sym_string] = sym_string,
   [sym__char] = sym__char,
   [aux_sym_string_repeat1] = aux_sym_string_repeat1,
@@ -112,15 +109,11 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym_expression_add] = {
+  [sym_expression_binary] = {
     .visible = true,
     .named = true,
   },
-  [sym_expression_multiply] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_expression_add_unary] = {
+  [sym_expression_unary] = {
     .visible = true,
     .named = true,
   },
@@ -299,9 +292,8 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [1] = {
     [sym_expression] = STATE(7),
-    [sym_expression_add] = STATE(5),
-    [sym_expression_multiply] = STATE(5),
-    [sym_expression_add_unary] = STATE(5),
+    [sym_expression_binary] = STATE(5),
+    [sym_expression_unary] = STATE(5),
     [sym_string] = STATE(5),
     [anon_sym_PLUS] = ACTIONS(3),
     [anon_sym_DASH] = ACTIONS(3),
@@ -310,9 +302,8 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [2] = {
     [sym_expression] = STATE(8),
-    [sym_expression_add] = STATE(5),
-    [sym_expression_multiply] = STATE(5),
-    [sym_expression_add_unary] = STATE(5),
+    [sym_expression_binary] = STATE(5),
+    [sym_expression_unary] = STATE(5),
     [sym_string] = STATE(5),
     [anon_sym_PLUS] = ACTIONS(3),
     [anon_sym_DASH] = ACTIONS(3),
@@ -321,9 +312,8 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [3] = {
     [sym_expression] = STATE(13),
-    [sym_expression_add] = STATE(5),
-    [sym_expression_multiply] = STATE(5),
-    [sym_expression_add_unary] = STATE(5),
+    [sym_expression_binary] = STATE(5),
+    [sym_expression_unary] = STATE(5),
     [sym_string] = STATE(5),
     [anon_sym_PLUS] = ACTIONS(3),
     [anon_sym_DASH] = ACTIONS(3),
@@ -332,9 +322,8 @@ static uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [4] = {
     [sym_expression] = STATE(14),
-    [sym_expression_add] = STATE(5),
-    [sym_expression_multiply] = STATE(5),
-    [sym_expression_add_unary] = STATE(5),
+    [sym_expression_binary] = STATE(5),
+    [sym_expression_unary] = STATE(5),
     [sym_string] = STATE(5),
     [anon_sym_PLUS] = ACTIONS(3),
     [anon_sym_DASH] = ACTIONS(3),
@@ -420,7 +409,7 @@ static uint16_t ts_small_parse_table[] = {
       anon_sym_PLUS,
       anon_sym_DASH,
   [96] = 1,
-    ACTIONS(45), 5,
+    ACTIONS(43), 5,
       ts_builtin_sym_end,
       anon_sym_PLUS,
       anon_sym_DASH,
@@ -454,7 +443,7 @@ static TSParseActionEntry ts_parse_actions[] = {
   [17] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
   [19] = {.entry = {.count = 1, .reusable = true}}, SHIFT(3),
   [21] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
-  [23] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_expression_add_unary, 2, .production_id = 1),
+  [23] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_expression_unary, 2, .production_id = 1),
   [25] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string, 2),
   [27] = {.entry = {.count = 1, .reusable = false}}, SHIFT(11),
   [29] = {.entry = {.count = 1, .reusable = false}}, SHIFT(12),
@@ -463,8 +452,7 @@ static TSParseActionEntry ts_parse_actions[] = {
   [35] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_repeat1, 2),
   [37] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_string_repeat1, 2), SHIFT_REPEAT(12),
   [40] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_repeat1, 2), SHIFT_REPEAT(12),
-  [43] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_expression_add, 3, .production_id = 2),
-  [45] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_expression_multiply, 3, .production_id = 2),
+  [43] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_expression_binary, 3, .production_id = 2),
 };
 
 #ifdef __cplusplus
