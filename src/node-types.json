@@ -12,6 +12,10 @@
           "named": true
         },
         {
+          "type": "expression_add_unary",
+          "named": true
+        },
+        {
           "type": "expression_multiply",
           "named": true
         },
@@ -40,6 +44,36 @@
           }
         ]
       },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "expression_add_unary",
+    "named": true,
+    "fields": {
       "operator": {
         "multiple": false,
         "required": true,

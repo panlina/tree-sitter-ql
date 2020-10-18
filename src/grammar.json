@@ -19,6 +19,10 @@
         {
           "type": "SYMBOL",
           "name": "expression_multiply"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_add_unary"
         }
       ]
     },
@@ -91,6 +95,40 @@
                 {
                   "type": "STRING",
                   "value": "/"
+                }
+              ]
+            }
+          },
+          {
+            "type": "FIELD",
+            "name": "right",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          }
+        ]
+      }
+    },
+    "expression_add_unary": {
+      "type": "PREC",
+      "value": 2,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "operator",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "+"
+                },
+                {
+                  "type": "STRING",
+                  "value": "-"
                 }
               ]
             }
