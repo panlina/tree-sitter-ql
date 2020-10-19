@@ -1,7 +1,7 @@
 module.exports = grammar({
 	name: 'ql',
 	rules: {
-		expression: $ => choice($.number, $.string, $.expression_binary, $.expression_unary),
+		expression: $ => choice($.number, $.string, $.expression_binary, $.expression_unary, $.expression_count),
 		expression_binary: $ => choice(
 			...[
 				['|', -4],
@@ -30,6 +30,10 @@ module.exports = grammar({
 				))
 			)
 		),
+		expression_count: $ => prec(3, seq(
+			field('left', $.expression),
+			field('operator', '#')
+		)),
 		number: $ => /\d+/,
 		string: $ => seq('"', repeat($._char), '"'),
 		_char: $ => choice($.char_literal, $.char_escaped),

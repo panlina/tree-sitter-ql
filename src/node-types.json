@@ -12,6 +12,10 @@
           "named": true
         },
         {
+          "type": "expression_count",
+          "named": true
+        },
+        {
           "type": "expression_unary",
           "named": true
         },
@@ -115,6 +119,32 @@
     }
   },
   {
+    "type": "expression_count",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#",
+            "named": false
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "expression_unary",
     "named": true,
     "fields": {
@@ -173,6 +203,10 @@
   },
   {
     "type": "\"",
+    "named": false
+  },
+  {
+    "type": "#",
     "named": false
   },
   {
