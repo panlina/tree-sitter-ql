@@ -1,5 +1,6 @@
 {
   "name": "ql",
+  "word": "identifier",
   "rules": {
     "expression": {
       "type": "CHOICE",
@@ -11,6 +12,10 @@
         {
           "type": "SYMBOL",
           "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         },
         {
           "type": "SYMBOL",
@@ -384,6 +389,10 @@
           }
         ]
       }
+    },
+    "identifier": {
+      "type": "PATTERN",
+      "value": "[_a-zA-Z][_a-zA-Z0-9]*"
     },
     "number": {
       "type": "PATTERN",

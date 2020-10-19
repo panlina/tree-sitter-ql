@@ -20,6 +20,10 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "number",
           "named": true
         },
@@ -255,6 +259,10 @@
   },
   {
     "type": "char_literal",
+    "named": true
+  },
+  {
+    "type": "identifier",
     "named": true
   },
   {
