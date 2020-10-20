@@ -15,7 +15,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "expression_name"
         },
         {
           "type": "SYMBOL",
@@ -389,6 +389,27 @@
           }
         ]
       }
+    },
+    "expression_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "::"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        }
+      ]
     },
     "identifier": {
       "type": "PATTERN",
