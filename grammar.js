@@ -7,10 +7,10 @@ module.exports = grammar({
 			$.string,
 			$.expression_name,
 			$.expression_this,
-			$.expression_binary,
-			$.expression_unary,
+			$.expression_parentheses,
 			$.expression_count,
-			$.expression_parentheses
+			$.expression_unary,
+			$.expression_binary
 		),
 		expression_binary: $ => choice(
 			...[

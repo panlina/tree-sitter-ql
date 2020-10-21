@@ -23,11 +23,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "expression_binary"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "expression_unary"
+          "name": "expression_parentheses"
         },
         {
           "type": "SYMBOL",
@@ -35,7 +31,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "expression_parentheses"
+          "name": "expression_unary"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_binary"
         }
       ]
     },
