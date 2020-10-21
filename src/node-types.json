@@ -24,6 +24,10 @@
           "named": true
         },
         {
+          "type": "expression_this",
+          "named": true
+        },
+        {
           "type": "expression_unary",
           "named": true
         },
@@ -183,6 +187,21 @@
     }
   },
   {
+    "type": "expression_this",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "expression_unary",
     "named": true,
     "fields": {
@@ -318,6 +337,10 @@
   {
     "type": "number",
     "named": true
+  },
+  {
+    "type": "this",
+    "named": false
   },
   {
     "type": "|",

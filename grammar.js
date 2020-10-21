@@ -6,6 +6,7 @@ module.exports = grammar({
 			$.number,
 			$.string,
 			$.expression_name,
+			$.expression_this,
 			$.expression_binary,
 			$.expression_unary,
 			$.expression_count,
@@ -44,6 +45,7 @@ module.exports = grammar({
 			field('operator', '#')
 		)),
 		expression_parentheses: $ => seq('(', $.expression, ')'),
+		expression_this: $ => seq("this", $.identifier),
 		expression_name: $ => seq(optional('::'), $.identifier),
 		identifier: $ => /[_a-zA-Z][_a-zA-Z0-9]*/,
 		number: $ => /\d+/,

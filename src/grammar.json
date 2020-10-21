@@ -19,6 +19,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "expression_this"
+        },
+        {
+          "type": "SYMBOL",
           "name": "expression_binary"
         },
         {
@@ -408,6 +412,19 @@
         {
           "type": "STRING",
           "value": ")"
+        }
+      ]
+    },
+    "expression_this": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "this"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         }
       ]
     },
