@@ -20,6 +20,10 @@
           "named": true
         },
         {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
           "type": "expression_unary",
           "named": true
         },
@@ -164,6 +168,21 @@
     }
   },
   {
+    "type": "expression_parentheses",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "expression_unary",
     "named": true,
     "fields": {
@@ -230,6 +249,14 @@
   },
   {
     "type": "&",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
     "named": false
   },
   {

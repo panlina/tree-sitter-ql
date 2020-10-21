@@ -28,6 +28,10 @@
         {
           "type": "SYMBOL",
           "name": "expression_count"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_parentheses"
         }
       ]
     },
@@ -389,6 +393,23 @@
           }
         ]
       }
+    },
+    "expression_parentheses": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
     },
     "expression_name": {
       "type": "SEQ",
