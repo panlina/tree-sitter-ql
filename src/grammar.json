@@ -35,6 +35,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "expression_element"
+        },
+        {
+          "type": "SYMBOL",
           "name": "expression_count"
         },
         {
@@ -426,6 +430,31 @@
             "content": {
               "type": "SYMBOL",
               "name": "identifier"
+            }
+          }
+        ]
+      }
+    },
+    "expression_element": {
+      "type": "PREC_LEFT",
+      "value": 4,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "STRING",
+            "value": "@"
+          },
+          {
+            "type": "FIELD",
+            "name": "index",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
             }
           }
         ]

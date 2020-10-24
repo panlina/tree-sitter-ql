@@ -10,6 +10,7 @@ module.exports = grammar({
 			$.expression_parentheses,
 			$.expression_id,
 			$.expression_property,
+			$.expression_element,
 			$.expression_count,
 			$.expression_unary,
 			$.expression_binary
@@ -50,6 +51,11 @@ module.exports = grammar({
 			$.expression,
 			'.',
 			field('property', $.identifier)
+		)),
+		expression_element: $ => prec.left(4, seq(
+			$.expression,
+			'@',
+			field('index', $.expression)
 		)),
 		expression_id: $ => prec(5, seq(
 			field('identifier', $.identifier),
