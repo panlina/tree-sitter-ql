@@ -52,8 +52,228 @@
         {
           "type": "SYMBOL",
           "name": "expression_conditional"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_filter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_which"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_map"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_limit"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_order"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_group"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_distinct"
         }
       ]
+    },
+    "expression_filter": {
+      "type": "PREC_LEFT",
+      "value": -6,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "STRING",
+            "value": "where"
+          },
+          {
+            "type": "FIELD",
+            "name": "filter",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          }
+        ]
+      }
+    },
+    "expression_which": {
+      "type": "PREC_LEFT",
+      "value": -6,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "STRING",
+            "value": "which"
+          },
+          {
+            "type": "FIELD",
+            "name": "filter",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          }
+        ]
+      }
+    },
+    "expression_map": {
+      "type": "PREC_LEFT",
+      "value": -6,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "STRING",
+            "value": "map"
+          },
+          {
+            "type": "FIELD",
+            "name": "mapper",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          }
+        ]
+      }
+    },
+    "expression_limit": {
+      "type": "PREC_LEFT",
+      "value": -6,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "STRING",
+            "value": "limit"
+          },
+          {
+            "type": "FIELD",
+            "name": "limiter",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          }
+        ]
+      }
+    },
+    "expression_order": {
+      "type": "PREC_LEFT",
+      "value": -6,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "STRING",
+            "value": "order"
+          },
+          {
+            "type": "FIELD",
+            "name": "orderer",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          },
+          {
+            "type": "FIELD",
+            "name": "direction",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "asc"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "desc"
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "expression_group": {
+      "type": "PREC_LEFT",
+      "value": -6,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "STRING",
+            "value": "group"
+          },
+          {
+            "type": "FIELD",
+            "name": "grouper",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          }
+        ]
+      }
+    },
+    "expression_distinct": {
+      "type": "PREC_LEFT",
+      "value": -6,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "distinct"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          }
+        ]
+      }
     },
     "expression_conditional": {
       "type": "PREC_RIGHT",

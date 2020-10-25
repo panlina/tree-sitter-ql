@@ -14,8 +14,50 @@ module.exports = grammar({
 			$.expression_count,
 			$.expression_unary,
 			$.expression_binary,
-			$.expression_conditional
+			$.expression_conditional,
+			$.expression_filter,
+			$.expression_which,
+			$.expression_map,
+			$.expression_limit,
+			$.expression_order,
+			$.expression_group,
+			$.expression_distinct
 		),
+		expression_filter: $ => prec.left(-6, seq(
+			$.expression,
+			'where',
+			field('filter', $.expression)
+		)),
+		expression_which: $ => prec.left(-6, seq(
+			$.expression,
+			'which',
+			field('filter', $.expression)
+		)),
+		expression_map: $ => prec.left(-6, seq(
+			$.expression,
+			'map',
+			field('mapper', $.expression)
+		)),
+		expression_limit: $ => prec.left(-6, seq(
+			$.expression,
+			'limit',
+			field('limiter', $.expression)
+		)),
+		expression_order: $ => prec.left(-6, seq(
+			$.expression,
+			'order',
+			field('orderer', $.expression),
+			field('direction', optional(choice('asc', 'desc')))
+		)),
+		expression_group: $ => prec.left(-6, seq(
+			$.expression,
+			'group',
+			field('grouper', $.expression)
+		)),
+		expression_distinct: $ => prec.left(-6, seq(
+			'distinct',
+			$.expression
+		)),
 		expression_conditional: $ => prec.right(-5, seq(
 			field('condition', $.expression),
 			'?',
