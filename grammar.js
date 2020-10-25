@@ -13,8 +13,16 @@ module.exports = grammar({
 			$.expression_element,
 			$.expression_count,
 			$.expression_unary,
-			$.expression_binary
+			$.expression_binary,
+			$.expression_conditional
 		),
+		expression_conditional: $ => prec.right(-5, seq(
+			field('condition', $.expression),
+			'?',
+			field('true', $.expression),
+			':',
+			field('false', $.expression)
+		)),
 		expression_binary: $ => choice(
 			...[
 				['|', -4],
