@@ -7,6 +7,7 @@ module.exports = grammar({
 			$.string,
 			$.expression_name,
 			$.expression_this,
+			$.expression_object,
 			$.expression_array,
 			$.expression_tuple,
 			$.expression_parentheses,
@@ -115,6 +116,16 @@ module.exports = grammar({
 			field('id', $.expression)
 		)),
 		expression_parentheses: $ => seq('(', $.expression, ')'),
+		expression_object: $ => seq(
+			'{',
+			commaSep($.expression_object_property),
+			'}'
+		),
+		expression_object_property: $ => seq(
+			$.identifier,
+			':',
+			$.expression
+		),
 		expression_array: $ => seq(
 			'[',
 			commaSep($.expression),
@@ -133,7 +144,10 @@ module.exports = grammar({
 		_char: $ => choice($.char_literal, $.char_escaped),
 		char_literal: $ => token.immediate(/[^"]/),
 		char_escaped: $ => token.immediate(/\\["\\bfnrtv]/)
-	}
+	},
+	conflicts: $ => [
+		[$.expression_object, $.expression_tuple]
+	]
 });
 
 // Copied from tree-sitter-javascript

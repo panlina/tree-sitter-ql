@@ -56,6 +56,10 @@
           "named": true
         },
         {
+          "type": "expression_object",
+          "named": true
+        },
+        {
           "type": "expression_order",
           "named": true
         },
@@ -438,6 +442,40 @@
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression_object",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "expression_object_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression_object_property",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
         {
           "type": "identifier",
           "named": true
