@@ -7,6 +7,8 @@ module.exports = grammar({
 			$.string,
 			$.expression_name,
 			$.expression_this,
+			$.expression_array,
+			$.expression_tuple,
 			$.expression_parentheses,
 			$.expression_id,
 			$.expression_property,
@@ -113,6 +115,16 @@ module.exports = grammar({
 			field('id', $.expression)
 		)),
 		expression_parentheses: $ => seq('(', $.expression, ')'),
+		expression_array: $ => seq(
+			'[',
+			commaSep($.expression),
+			']'
+		),
+		expression_tuple: $ => seq(
+			'{',
+			commaSep($.expression),
+			'}'
+		),
 		expression_this: $ => seq("this", $.identifier),
 		expression_name: $ => seq(optional('::'), $.identifier),
 		identifier: $ => /[_a-zA-Z][_a-zA-Z0-9]*/,
@@ -123,3 +135,11 @@ module.exports = grammar({
 		char_escaped: $ => token.immediate(/\\["\\bfnrtv]/)
 	}
 });
+
+// Copied from tree-sitter-javascript
+function commaSep1(rule) {
+	return seq(rule, repeat(seq(',', rule)));
+}
+function commaSep(rule) {
+	return optional(commaSep1(rule));
+}
