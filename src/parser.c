@@ -6280,7 +6280,7 @@ static TSParseActionEntry ts_parse_actions[] = {
   [220] = {.entry = {.count = 1, .reusable = true}}, SHIFT(49),
   [222] = {.entry = {.count = 1, .reusable = true}}, SHIFT(43),
   [224] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_expression_array_repeat1, 2),
-  [226] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_expression_object_property, 3),
+  [226] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_expression_object_property, 3, .production_id = 3),
   [228] = {.entry = {.count = 1, .reusable = true}}, SHIFT(28),
   [230] = {.entry = {.count = 1, .reusable = true}}, SHIFT(60),
   [232] = {.entry = {.count = 1, .reusable = true}}, SHIFT(10),

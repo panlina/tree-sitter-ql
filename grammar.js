@@ -133,9 +133,9 @@ module.exports = grammar({
 			'}'
 		),
 		expression_object_property: $ => seq(
-			$.identifier,
+			field('name', $.identifier),
 			':',
-			$.expression
+			field('value', $.expression)
 		),
 		expression_array: $ => seq(
 			'[',
