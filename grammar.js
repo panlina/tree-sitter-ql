@@ -24,7 +24,18 @@ module.exports = grammar({
 			$.expression_limit,
 			$.expression_order,
 			$.expression_group,
-			$.expression_distinct
+			$.expression_distinct,
+			$.expression_comma
+		),
+		expression_comma: $ => prec.right(-7, seq(
+			field('head', $.expression_comma_head),
+			',',
+			field('body', $.expression)
+		)),
+		expression_comma_head: $ => seq(
+			field('name', $.identifier),
+			'=',
+			field('value', $.expression),
 		),
 		expression_filter: $ => prec.left(-6, seq(
 			$.expression,
@@ -146,7 +157,8 @@ module.exports = grammar({
 		char_escaped: $ => token.immediate(/\\["\\bfnrtv]/)
 	},
 	conflicts: $ => [
-		[$.expression_object, $.expression_tuple]
+		[$.expression_object, $.expression_tuple],
+		[$.expression_comma_head, $.expression_name]
 	]
 });
 

@@ -16,6 +16,10 @@
           "named": true
         },
         {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
           "type": "expression_conditional",
           "named": true
         },
@@ -190,6 +194,58 @@
         ]
       },
       "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "expression_comma",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      },
+      "head": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression_comma_head",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "expression_comma_head",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
         "multiple": false,
         "required": true,
         "types": [

@@ -92,6 +92,64 @@
         {
           "type": "SYMBOL",
           "name": "expression_distinct"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression_comma"
+        }
+      ]
+    },
+    "expression_comma": {
+      "type": "PREC_RIGHT",
+      "value": -7,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "head",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression_comma_head"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": ","
+          },
+          {
+            "type": "FIELD",
+            "name": "body",
+            "content": {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          }
+        ]
+      }
+    },
+    "expression_comma_head": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "expression"
+          }
         }
       ]
     },
@@ -1038,6 +1096,10 @@
     [
       "expression_object",
       "expression_tuple"
+    ],
+    [
+      "expression_comma_head",
+      "expression_name"
     ]
   ],
   "externals": [],
