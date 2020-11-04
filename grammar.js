@@ -2,7 +2,8 @@ module.exports = grammar({
 	name: 'ql',
 	word: $ => $.identifier,
 	rules: {
-		expression: $ => choice(
+		expression: $ => $._expression,
+		_expression: $ => choice(
 			$.number,
 			$.string,
 			$.expression_name,
@@ -30,54 +31,54 @@ module.exports = grammar({
 		expression_comma: $ => prec.right(-7, seq(
 			field('head', $.expression_comma_head),
 			',',
-			field('body', $.expression)
+			field('body', $._expression)
 		)),
 		expression_comma_head: $ => seq(
 			field('name', $.identifier),
 			'=',
-			field('value', $.expression),
+			field('value', $._expression),
 		),
 		expression_filter: $ => prec.left(-6, seq(
-			$.expression,
+			$._expression,
 			'where',
-			field('filter', $.expression)
+			field('filter', $._expression)
 		)),
 		expression_which: $ => prec.left(-6, seq(
-			$.expression,
+			$._expression,
 			'which',
-			field('filter', $.expression)
+			field('filter', $._expression)
 		)),
 		expression_map: $ => prec.left(-6, seq(
-			$.expression,
+			$._expression,
 			'map',
-			field('mapper', $.expression)
+			field('mapper', $._expression)
 		)),
 		expression_limit: $ => prec.left(-6, seq(
-			$.expression,
+			$._expression,
 			'limit',
-			field('limiter', $.expression)
+			field('limiter', $._expression)
 		)),
 		expression_order: $ => prec.left(-6, seq(
-			$.expression,
+			$._expression,
 			'order',
-			field('orderer', $.expression),
+			field('orderer', $._expression),
 			field('direction', optional(choice('asc', 'desc')))
 		)),
 		expression_group: $ => prec.left(-6, seq(
-			$.expression,
+			$._expression,
 			'group',
-			field('grouper', $.expression)
+			field('grouper', $._expression)
 		)),
 		expression_distinct: $ => prec.left(-6, seq(
 			'distinct',
-			$.expression
+			$._expression
 		)),
 		expression_conditional: $ => prec.right(-5, seq(
-			field('condition', $.expression),
+			field('condition', $._expression),
 			'?',
-			field('true', $.expression),
+			field('true', $._expression),
 			':',
-			field('false', $.expression)
+			field('false', $._expression)
 		)),
 		expression_binary: $ => choice(
 			...[
@@ -90,9 +91,9 @@ module.exports = grammar({
 				[choice('*', '/'), 1]
 			].map(([operator, precedence]) =>
 				prec.left(precedence, seq(
-					field('left', $.expression),
+					field('left', $._expression),
 					field('operator', operator),
-					field('right', $.expression)
+					field('right', $._expression)
 				))
 			)
 		),
@@ -103,30 +104,30 @@ module.exports = grammar({
 			].map(([operator, precedence]) =>
 				prec(precedence, seq(
 					field('operator', operator),
-					field('right', $.expression)
+					field('right', $._expression)
 				))
 			)
 		),
 		expression_count: $ => prec(3, seq(
-			field('left', $.expression),
+			field('left', $._expression),
 			field('operator', '#')
 		)),
 		expression_property: $ => prec.left(4, seq(
-			$.expression,
+			$._expression,
 			'.',
 			field('property', $.identifier)
 		)),
 		expression_element: $ => prec.left(4, seq(
-			$.expression,
+			$._expression,
 			'@',
-			field('index', $.expression)
+			field('index', $._expression)
 		)),
 		expression_id: $ => prec(5, seq(
 			field('identifier', $.identifier),
 			'#',
-			field('id', $.expression)
+			field('id', $._expression)
 		)),
-		expression_parentheses: $ => seq('(', $.expression, ')'),
+		expression_parentheses: $ => seq('(', $._expression, ')'),
 		expression_object: $ => seq(
 			'{',
 			commaSep($.expression_object_property),
@@ -135,16 +136,16 @@ module.exports = grammar({
 		expression_object_property: $ => seq(
 			field('name', $.identifier),
 			':',
-			field('value', $.expression)
+			field('value', $._expression)
 		),
 		expression_array: $ => seq(
 			'[',
-			commaSep($.expression),
+			commaSep($._expression),
 			']'
 		),
 		expression_tuple: $ => seq(
 			'{',
-			commaSep($.expression),
+			commaSep($._expression),
 			'}'
 		),
 		expression_this: $ => seq("this", $.identifier),

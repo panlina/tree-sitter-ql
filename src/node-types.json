@@ -111,7 +111,95 @@
       "required": false,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -126,7 +214,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -198,7 +374,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -214,7 +478,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -250,7 +602,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -266,7 +706,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -276,7 +804,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -286,7 +902,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -302,7 +1006,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -328,7 +1120,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -343,7 +1223,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -354,7 +1322,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -369,7 +1425,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -380,7 +1524,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -395,7 +1627,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -406,7 +1726,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -421,7 +1829,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -447,7 +1943,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -458,7 +2042,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -473,7 +2145,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -484,7 +2244,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -539,7 +2387,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -569,7 +2505,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -580,7 +2604,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -595,7 +2707,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -621,7 +2821,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -651,7 +2939,95 @@
       "required": false,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -680,7 +3056,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -696,7 +3160,95 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "expression_array",
+            "named": true
+          },
+          {
+            "type": "expression_binary",
+            "named": true
+          },
+          {
+            "type": "expression_comma",
+            "named": true
+          },
+          {
+            "type": "expression_conditional",
+            "named": true
+          },
+          {
+            "type": "expression_count",
+            "named": true
+          },
+          {
+            "type": "expression_distinct",
+            "named": true
+          },
+          {
+            "type": "expression_element",
+            "named": true
+          },
+          {
+            "type": "expression_filter",
+            "named": true
+          },
+          {
+            "type": "expression_group",
+            "named": true
+          },
+          {
+            "type": "expression_id",
+            "named": true
+          },
+          {
+            "type": "expression_limit",
+            "named": true
+          },
+          {
+            "type": "expression_map",
+            "named": true
+          },
+          {
+            "type": "expression_name",
+            "named": true
+          },
+          {
+            "type": "expression_object",
+            "named": true
+          },
+          {
+            "type": "expression_order",
+            "named": true
+          },
+          {
+            "type": "expression_parentheses",
+            "named": true
+          },
+          {
+            "type": "expression_property",
+            "named": true
+          },
+          {
+            "type": "expression_this",
+            "named": true
+          },
+          {
+            "type": "expression_tuple",
+            "named": true
+          },
+          {
+            "type": "expression_unary",
+            "named": true
+          },
+          {
+            "type": "expression_which",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           }
         ]
@@ -707,7 +3259,95 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "expression_array",
+          "named": true
+        },
+        {
+          "type": "expression_binary",
+          "named": true
+        },
+        {
+          "type": "expression_comma",
+          "named": true
+        },
+        {
+          "type": "expression_conditional",
+          "named": true
+        },
+        {
+          "type": "expression_count",
+          "named": true
+        },
+        {
+          "type": "expression_distinct",
+          "named": true
+        },
+        {
+          "type": "expression_element",
+          "named": true
+        },
+        {
+          "type": "expression_filter",
+          "named": true
+        },
+        {
+          "type": "expression_group",
+          "named": true
+        },
+        {
+          "type": "expression_id",
+          "named": true
+        },
+        {
+          "type": "expression_limit",
+          "named": true
+        },
+        {
+          "type": "expression_map",
+          "named": true
+        },
+        {
+          "type": "expression_name",
+          "named": true
+        },
+        {
+          "type": "expression_object",
+          "named": true
+        },
+        {
+          "type": "expression_order",
+          "named": true
+        },
+        {
+          "type": "expression_parentheses",
+          "named": true
+        },
+        {
+          "type": "expression_property",
+          "named": true
+        },
+        {
+          "type": "expression_this",
+          "named": true
+        },
+        {
+          "type": "expression_tuple",
+          "named": true
+        },
+        {
+          "type": "expression_unary",
+          "named": true
+        },
+        {
+          "type": "expression_which",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
