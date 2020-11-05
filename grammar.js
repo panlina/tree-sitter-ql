@@ -2,6 +2,10 @@ module.exports = grammar({
 	name: 'ql',
 	word: $ => $.identifier,
 	rules: {
+		program: $ => seq(
+			field('declaration', repeat($.declaration)),
+			field('expression', optional($.expression))
+		),
 		expression: $ => $._expression,
 		_expression: $ => choice(
 			$.number,
@@ -155,7 +159,38 @@ module.exports = grammar({
 		string: $ => seq('"', repeat($._char), '"'),
 		_char: $ => choice($.char_literal, $.char_escaped),
 		char_literal: $ => token.immediate(/[^"]/),
-		char_escaped: $ => token.immediate(/\\["\\bfnrtv]/)
+		char_escaped: $ => token.immediate(/\\["\\bfnrtv]/),
+		declaration: $ => seq(
+			field('name', $.identifier),
+			"{",
+			repeat($._declaration_statement),
+			"}"
+		),
+		_declaration_statement: $ => choice(
+			$._declaration_property,
+			$.declaration_id
+		),
+		_declaration_property: $ => choice(
+			$.declaration_property_type,
+			$.declaration_property_value
+		),
+		declaration_property_type: $ => seq(
+			field('name', $.identifier),
+			":",
+			field('type', $.identifier),
+			";"
+		),
+		declaration_property_value: $ => seq(
+			field('name', $.identifier),
+			"=",
+			field('value', $._expression),
+			";"
+		),
+		declaration_id: $ => seq(
+			"id",
+			field('property', $.identifier),
+			";"
+		)
 	},
 	conflicts: $ => [
 		[$.expression_object, $.expression_tuple],

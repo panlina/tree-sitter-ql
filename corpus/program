@@ -1,0 +1,41 @@
+===
+program
+===
+
+t {
+	a: number;
+	b = a+1;
+	id i;
+}
+
+s {}
+
+t
+
+---
+
+(program
+	declaration: (declaration
+		name: (identifier)
+		(declaration_property_type
+			name: (identifier)
+			type: (identifier)
+		)
+		(declaration_property_value
+			name: (identifier)
+			value: (expression_binary
+				left: (expression_name (identifier))
+				right: (number)
+			)
+		)
+		(declaration_id
+			property: (identifier)
+		)
+	)
+	declaration: (declaration
+		name: (identifier)
+	)
+	expression: (expression
+		(expression_name (identifier))
+	)
+)

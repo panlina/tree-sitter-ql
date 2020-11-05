@@ -6,9 +6,11 @@ x+1
 
 ---
 
-(expression
-	(expression_binary
-		left: (expression_name (identifier))
-		right: (number)
+(program
+	expression: (expression
+		(expression_binary
+			left: (expression_name (identifier))
+			right: (number)
+		)
 	)
 )
